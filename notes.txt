@@ -1,0 +1,4 @@
+Skapade först en mapp på skrivbordet som jag sen öppnade i terminalen via kommando
+
+Sen skapade jag tre filer touch index.html m.m
+
