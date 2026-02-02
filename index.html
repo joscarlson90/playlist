@@ -5,7 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oi&display=swap"
+      rel="stylesheet"
+    />
     <title>Playlist</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>FireMusic</h1>
+    </header>
+    <main>
+      <div class="playlistContainer">
+        <form id="form">
+          <input type="text" id="textBox" placeholder="Spellistans namn" required />
+          <input type="text" id="textBox" placeholder="Genre" required />
+          <input type="text" id="textBox" placeholder="Artist" required />
+          <input type="text" id="textBox" placeholder="Låtar" required />
+          <button type="submit" id="playlistBtn">Skapa spellista</button>
+        </form>
+        <section id="createPlaylist"></section>
+      </div>
+    </main>
+  </body>
 </html>

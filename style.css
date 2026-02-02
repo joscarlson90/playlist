@@ -1,5 +1,80 @@
+:root {
+    --primaryColor: darkslategrey;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(47, 79, 79, 0.348);
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  height: 100px;
+  font-family: "Oi", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 42px;
+  color: whitesmoke;
+}
+
+#form {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  border: 1px solid var(--primaryColor);
+  box-shadow: 5px 5px 5px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin: 10px;
+  gap: 20px;
+  z-index: 10;
+  background: rgb(246, 200, 114);
+  overflow-y: auto;
+}
+
+#textBox {
+    border-style: none;
+    padding: 5px 5px;
+    border-radius: 30px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primaryColor);
+  z-index: 0;
+  padding-left: 350px;
+}
+
+#createPlaylist {
+  margin: 10px;
+}
+
+#playlistBtn {
+  margin-top: auto;
+  padding: 8px 12px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  background-color: var(--primaryColor);
+  color: whitesmoke;
+  border: none;
+  cursor: pointer;
+  align-self: stretch;
 }

@@ -6,4 +6,8 @@ Skapade ett repo i terminalen med git init, adderade alla filer med git add ., s
 
 Skapade sedan ett repo på Github och kopierade in git remote add origin https://github.com/joscarlson90/playlist.git i vs code för att koppla samman
 
-Sen git remote -v 
+Sen git remote -v
+
+Skapade sedan alla mina två andra brancher:
+git checkout -b development
+git checkout -b features
