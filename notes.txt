@@ -2,3 +2,8 @@ Skapade först en mapp på skrivbordet som jag sen öppnade i terminalen via kom
 
 Sen skapade jag tre filer touch index.html m.m
 
+Skapade ett repo i terminalen med git init, adderade alla filer med git add ., sen sparade jag ner allt med git commit -m "kommentar"
+
+Skapade sedan ett repo på Github och kopierade in git remote add origin https://github.com/joscarlson90/playlist.git i vs code för att koppla samman
+
+Sen git remote -v 
