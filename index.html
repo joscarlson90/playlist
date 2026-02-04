@@ -1,11 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oi&display=swap"
+      rel="stylesheet"
+    />
     <title>Playlist</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Din musik</h1>
+    </header>
+    <main>
+      <div class="playlistContainer">
+        <form id="form">
+          <input type="text" id="playlistName" placeholder="Namn på spellistan" required />
+          <input type="text" id="genreName" placeholder="Genre" required />
+          <input type="text" id="artistName" placeholder="Artist" required />
+          <input type="text" id="songName" placeholder="Låtar" required />
+          <button type="submit" id="playlistBtn">Skapa spellista</button>
+        </form>
+        <section id="createPlaylist"></section>
+      </div>
+    </main>
+  </body>
 </html>
