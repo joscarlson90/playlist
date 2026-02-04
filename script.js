@@ -15,14 +15,20 @@ function addPlaylist() {
   const artist = document.getElementById("artistName").value;
   const song = document.getElementById("songName").value;
 
-  const songs = song.split(",").map(s => s.trim()).filter(Boolean);
+  const songs = song
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
 
   const playlist = {
     name: name,
-    genre: genre,
-    artist: artist,
-    songs: songs,
+    music: {
+      [genre]: {
+        [artist]: songs,
+      },
+    },
   };
+
   playlists.push(playlist);
 
   showPlaylists();
@@ -33,13 +39,18 @@ function showPlaylists() {
   content.innerHTML = "";
 
   playlists.forEach(function (list) {
-    content.innerHTML += `
-    <div class="playlist">
-    <h3>${list.name}</h3>
-    <p><strong>Genre:</strong> ${list.genre}</p>
-    <p><strong>Artist:</strong> ${list.artist}</p>
-    <p><strong>Låtar:</strong> ${list.songs.join(", ")}</p>
-    </div>
-    `;
+    let htmlContent = `<div class="playlist"><h3>${list.name}</h3>`;
+
+    for (const genre in list.music) {
+      htmlContent += `<p><strong>Genre:</strong> ${genre}</p>`;
+
+      for (const artist in list.music[genre]) {
+        htmlContent += `<p><strong>Artist:</strong> ${artist}</p>`;
+        htmlContent += `<p><strong>Låtar:</strong> ${list.music[genre][artist].join(", ")}</p>`;
+      }
+    }
+
+    htmlContent += `</div>`;
+    content.innerHTML += htmlContent;
   });
 }
