@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -18,15 +18,16 @@
       <h1>Din musik</h1>
     </header>
     <main>
-      <div class="playlistContainer">
-        <form id="form">
-          <input type="text" id="playlistName" placeholder="Namn på spellistan" required />
-          <input type="text" id="genreName" placeholder="Genre" required />
-          <input type="text" id="artistName" placeholder="Artist" required />
-          <input type="text" id="songName" placeholder="Låtar" required />
-          <button type="submit" id="playlistBtn">Skapa spellista</button>
-        </form>
-        <section id="createPlaylist"></section>
+      <div class="genreButtons">
+        <button type="button" id="popGenre">POP</button>
+        <button type="button" id="soulGenre">SOUL</button>
+        <button type="button" id="rockGenre">ROCK</button>
+        <button type="button" id="hiphopGenre">HIPHOP</button>
+        <button type="button" id="rnbGenre">R&B</button>
+      </div>
+
+      <div class="songListForm">
+        <div id="playlistContainer"></div>
       </div>
     </main>
   </body>
