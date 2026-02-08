@@ -34,7 +34,7 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background-image: url(andrew-solok--9zPjrqCoSE-unsplash.jpg);
+  background-image: url("../assets/background-img.jpg");
   background-size: cover;
   background-position-y: center;
   color: #333;
