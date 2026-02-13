@@ -1,0 +1,31 @@
+export const songs = [
+  {
+    name: "Allt",
+    songs: [
+      { title: "Genom Eld", artist: "Oskar Linnros", genre: "Pop" },
+      { title: "Havanna", artist: "Daniela Rathana", genre: "Pop" },
+      { title: "Roll with Me", artist: "Charli xcx", genre: "Pop" },
+      { title: "Din tid kommer", artist: "Håkan Hellström", genre: "Pop" },
+      { title: "What A Wonderful World", artist: "Sam Cooke", genre: "Soul" },
+      { title: "Lean on Me", artist: "Bill Withers", genre: "Soul" },
+      { title: "Yukon", artist: "Justin Bieber", genre: "Soul" },
+      {
+        title: "Ain't No Mountain High Enough",
+        artist: "Marvin Gaye",
+        genre: "Soul",
+      },
+      { title: "Enter Sandman", artist: "Metallica", genre: "Rock" },
+      { title: "Back In Black", artist: "AC/DC", genre: "Rock" },
+      { title: "Puppet Parade", artist: "Megadeth", genre: "Rock" },
+      { title: "Run to the Hills", artist: "Iron Maiden", genre: "Rock" },
+      { title: "7 lr 8", artist: "Cleo", genre: "HipHop" },
+      { title: "Angel", artist: "Little Simz", genre: "HipHop" },
+      { title: "7/11", artist: "Beyoncé", genre: "HipHop" },
+      { title: "Jump", artist: "Kris Kross", genre: "HipHop" },
+      { title: "Brown Sugar", artist: "D'Angelo", genre: "R&B" },
+      { title: "Folded", artist: "Kehlani", genre: "R&B" },
+      { title: "What You Need", artist: "Tems", genre: "R&B" },
+      { title: "Hot Body", artist: "Ayra Starr", genre: "R&B" },
+    ],
+  },
+];
