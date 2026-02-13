@@ -28,7 +28,5 @@ function attachGenreHandlers() {
 
 document.addEventListener("DOMContentLoaded", () => {
   attachGenreHandlers();
-  // no songs shown until a button is clicked
-  // showSongsByGenre();
 });
 

@@ -8,7 +8,6 @@ export function renderSongs(songList) {
     .map((s) => `<div>${s.artist} – ${s.title} <em>(${s.genre})</em></div>`)
     .join("");
 
-  // show or hide the container depending on whether we have any songs
   container.style.display = songList.length > 0 ? "block" : "none";
 }
 
