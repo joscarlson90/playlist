@@ -20,13 +20,17 @@
     sans-serif;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 main {
   width: 100%;
   min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* start from top instead of centering */
+  justify-content: flex-start;
   padding: 2rem 0;
 }
 
@@ -38,6 +42,7 @@ body {
   background-image: url("../assets/background-img.jpg");
   background-size: cover;
   background-position-y: center;
+  background-attachment: fixed;
   color: #333;
 }
 
@@ -55,13 +60,16 @@ header h1 {
 #playlistContainer {
   display: none;
   background: linear-gradient(135deg, #edecfd, #b4b2f8);
-  max-width: auto;
   padding: 2rem;
   border-radius: 16px;
   margin-top: 20px;
 }
 
-.genreButtons {
+#playlistContainer.is-open {
+  display: block;
+}
+
+.genreButtons.is-open {
   margin-bottom: 20px;
 }
 

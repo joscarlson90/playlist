@@ -1,32 +1,36 @@
 import { showSongsByGenre } from "./genre.js";
 
 function attachGenreHandlers() {
-  document.getElementById("allGenre")?.addEventListener("click", () => {
-    showSongsByGenre();
-  });
+  console.log("attachGenreHandlers RUNS");
+  const buttons = document.querySelectorAll(".button");
+  const playlist = document.getElementById("playlistContainer");
 
-  document.getElementById("popGenre")?.addEventListener("click", () => {
-    showSongsByGenre("Pop");
-  });
+  console.log("buttons found:", buttons.length);
+  console.log("playlist:", playlist);
 
-  document.getElementById("soulGenre")?.addEventListener("click", () => {
-    showSongsByGenre("Soul");
-  });
+  let currentGenre = null;
 
-  document.getElementById("rockGenre")?.addEventListener("click", () => {
-    showSongsByGenre("Rock");
-  });
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const genre = button.dataset.genre;
+      console.log("CLICK:", genre);
 
-  document.getElementById("hiphopGenre")?.addEventListener("click", () => {
-    showSongsByGenre("HipHop");
-  });
+      if (playlist.classList.contains("is-open") && genre === currentGenre) {
+        console.log("closing");
 
-  document.getElementById("rnbGenre")?.addEventListener("click", () => {
-    showSongsByGenre("R&B");
+        playlist.classList.remove("is-open");
+        currentGenre = null;
+        return;
+      }
+
+      console.log("opening / switching");
+      playlist.classList.add("is-open");
+      currentGenre = genre;
+      showSongsByGenre(genre);
+    });
   });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   attachGenreHandlers();
 });
-
