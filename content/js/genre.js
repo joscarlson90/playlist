@@ -1,23 +1,26 @@
 import { songs } from "./songs.js";
 
 export function renderSongs(songList) {
-  const container = document.getElementById("playlistContainer");
+  const container = document.getElementById("playlist-container");
   if (!container) return;
 
   container.innerHTML = songList
-    .map((s) => `<div>${s.artist} – ${s.title} <em>(${s.genre})</em></div>`)
+    .map(
+      (s) =>
+        `<div><strong>${s.artist}</strong> – ${s.title} <em>(${s.genre})</em></div>`,
+    )
     .join("");
-    
-  container.style.display = songList.length > 0 ? "block" : "none";
 }
 
 export function showSongsByGenre(genre) {
   const allSongs = songs[0].songs;
 
-  if (!genre) {
+  if (!genre || genre.toLowerCase() === "all") {
     renderSongs(allSongs);
-    return;
+    return allSongs;
   }
-  const filtered = allSongs.filter((s) => s.genre === genre);
+  const filtered = allSongs.filter(
+    (s) => s.genre.toLowerCase() === genre.toLowerCase(),
+  );
   renderSongs(filtered);
 }
