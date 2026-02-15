@@ -1,7 +1,7 @@
 import { songs } from "./songs.js";
 
 export function renderSongs(songList) {
-  const container = document.getElementById("playlistContainer");
+  const container = document.getElementById("playlist-container");
   if (!container) return;
 
   container.innerHTML = songList
